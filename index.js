@@ -56,12 +56,14 @@ while (seguirCotizando = true) {
         noches = parseInt(prompt(`Ingrese la cantidad de noches que desea quedarse en numeros`))
         const precioxCantidad = descuentoxNoches(noches)
         alert(`El precio de tu reserva seria de ${precioxCantidad}USD, por las ${noches} noches.`)
+        console.log(precioxCantidad)
         decision = prompt(`¿Desea seguir cotizando? Ingrese si o no`)
         while (seguirCotizando = true){
             if (decision.toLowerCase() === `si`){
                 noches = parseInt(prompt(`Ingrese la cantidad de noches que desea quedarse en numeros`))
                 const precioxCantidad = descuentoxNoches(noches)
                 alert(`El precio de tu reserva seria de ${precioxCantidad}USD, por las ${noches} noches.`)
+                console.log(precioxCantidad)
                 decision = prompt(`¿Desea seguir cotizando? Ingrese si o no`)        
             }
             else if (decision.toLowerCase()===`no`){
