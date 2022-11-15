@@ -85,7 +85,7 @@ while (seguirCotizando = true) {
                     console.log(edificioCliente)
                     precioxCantidad = edificioCliente.descuento(noches)
                     console.log(precioxCantidad)            
-                    alert(`El precio de tu reserva seria de ${Math.round(precioxCantidad)}USD, por ${noches} noches en ${edificioCliente.nombre}.`)    
+                    alert(`El precio de tu reserva seria de ${Math.round(precioxCantidad)}USD, por ${noches} noches en ${edificioCliente.nombre}, que esta ubicado en ${edificioCliente.ubicacion}.`)    
                     break
                     }
                     else{
