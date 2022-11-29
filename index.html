@@ -1,274 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-    content="Somos Ayres Apartments una empresa donde tendras la mejor estadia para tu visita a buenos aires ademas de la oportunidad de poder agregar otros servicios para mejorar tu relax">
-    <meta name="keywords" content="HOTEL, HOSTEL, ESTADIA, VACACIONES, RELAX, HOTELERIA, DEPARTAMENTOS">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Acme&family=Lato:wght@100;300;400;700&family=Teko:wght@300&family=Yeseva+One&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Ayres Apartments | Viví la mejor experiencia de estadia en Buenos Aires</title>
+    <title>Document</title>
 </head>
-
 <body>
+    <div class="reservasInicio">
+        <h2>POR FAVOR INGRESE LOS DATOS DE SU RESERVA</h2>
 
-    <!-- Encabezado -->
+        <div class="ubiDepto">
+            <label for="">Ubicacion</label>
+            <select class="ubicacion" name="ubicacion" id="ubicacion">
+                <option value="Seleccionar">Seleccionar</option>
+            </select>
+        </div><br>
 
-    <header>
-        <div class="encabezado">
-            <nav class="menuPrincipal navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="./index.html"><img id="logo" src="./Galeria/LogoSinFondo.png" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="barra offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AYRES APARTMENTS</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li><a href="./index.html">Inicio</a></li>
-                                <li><a href="./pages/servicios.html">Servicios</a></li>
-                                <li><a href="./pages/ubicaciones.html">Ubicaciones</a></li>
-                                <li><a href="./pages/reservas.html">Reservas</a></li>
-                                <li><a href="./pages/contacto.html">Contacto</a></li>    
-                            </ul>
-                        </div>
-                        <p data-bs-dismiss="offcanvas">¡Bienvenido! / ¡Welcome!</p>
-                        <img data-bs-dismiss="offcanvas" src="./Galeria/saludo.png" alt="saludo inicial">
-                    </div>
-                </div>
-            </nav>
-            <form class="reservasInicio">
-                <div class="ubiDepto">
-                    <label for="">Ubicacion</label>
-                    <select name="Ubicacion" id="Ubicacion">
-                        <option value="Seleccionar">Seleccionar</option>
-                        <option value="PalermoApartments">Palermo Apartments</option>
-                        <option value="Recoleta Plaza">Recoleta Plaza Guido</option>
-                        <option value="Ayres de Recoleta">Ayres de Recoleta Uriburu</option>
-                    </select>
-                </div>
-                <div class="checkin">
-                    <label for="">Check-in</label>
-                    <input type="date">
-                </div>
-                <div class="checkout">
-                    <label for="">Check-out</label>
-                    <input type="date">
-                </div>
-                <div class="tipoHabitacion">
-                    <label for="">Tipo de Habitacion</label>
-                    <select name="Tipo de Habitacion" id="Tipo de Habitacion">
-                        <option value="Seleccionar">Seleccionar</option>
-                        <option value="Doble">Doble</option>
-                        <option value="Triple">Triple</option>
-                        <option value="Cuadruple">Cuadruple</option>
-                    </select>
-                </div>
-                <div class="tarifas">
-                    <input data-bs-target="" type="submit" value="Ver Tarifas">
-                </div>
-            </form>
-        </div>
-    </header>
+        <div class="tipoHabitacion">
+            <label for="">Tipo de Habitacion</label>
+            <select class="habitacion" name="Tipo de Habitacion" id="Tipo de Habitacion">
+                <option value="Seleccionar">Seleccionar</option>
+            </select>
+        </div><br>
 
+        <div class="checkin">
+            <label for="">Ingresa Fecha de Check-in</label>
+            <input class="fecha" type="date">
+        </div><br>
 
-    <!-- Titulo de Pagina -->
+        <div class="cantidadNoches">
+            <label for="">Ingresa la cantidad de noches</label>
+            <input class="noches" type="number">
+        </div><br>
 
-    <div class="titulo">
-        <video id="video" src="./Galeria/Video1.mp4" autoplay muted loop></video>
-        <div class="textoTitulo animate__animated animate__zoomIn">
-            <p class="bienvenidos">BIENVENIDOS A</p>
-            <p class="ayresapartments">AYRES APARTMENTS</p>
-            <h1>DONDE PODRAS VIVIR LA MEJOR EXPERIENCIA DE ESTADIA EN BUENOS AIRES</h1>
-        </div>
+        <div class="tarifas">
+            <button class="cotizar">Cotizar Presupuesto</button>
+        </div><br>
     </div>
 
 
-    <!-- Descripcion -->
-
-    <main class="inicio">
-        <div class="cajaPrincipal">
-            <h2 class="quienesSomos">¿QUIENES SOMOS?</h2>
-            <p class="p1">Ayres Apartments se encuentra en Palermo Soho y Recoleta para ofrecerte la mejor estadía
-                durante tu viaje. Ofrece conexión WiFi gratuita, gimnasio, laundry y pileta al aire libre. Descubra
-                Buenos Aires y todas sus atracciones con nuestra ubicación ideal</p>
-            <p class="p2">Todos los departamentos incluyen TV por cable de pantalla plana, kitchinette con microondas y
-                heladera, baño privado con bañera y artículos de aseo, toallas y ropa de cama. Nuestros deptos en Buenos
-                Aires cuenta con tecnología de vanguardia e instalaciones excelentes para celebrar eventos en el centro
-                de la ciudad</p>
-            <p class="p3">Somos una opción genial para todo tipo de viajero, podes venir por trabajo o recreación, de
-                ambas formas te vamos a brindar la mejor atención. Disfrute de acceso a Internet de alta velocidad,
-                centro de negocios, registro de llegada y salida exprés y servicio de concierge cuando se aloje en
-                nuestro hotel de Buenos Aires</p>
-            <img class="ba animacionPrincipal" src="./Galeria/BA.png" alt="ba">
-            <img class="caminito animacionPrincipal" src="./Galeria/caminito.png" alt="caminito">
-            <img class="galileo " src="./Galeria/Galileo.png" alt="galileo">
-        </div>
-    </main>
-    
-
-    <!-- Galeria -->
-
-    <div class="ubiGaleria">
-        <p>¿DONDE QUERES HACER TU RESERVA?</p>
-        
-        <!-- Palermo -->
-        <section class="Galeria">
-            <article class="palermoGaleria">
-                <img class="imgGaleria" src="./Galeria/Palermo/Principal.png" alt="palermo">
-                <h2 class="tituloGaleria">PALERMO APARTMENTS</h2>
-            </article>
-            <button type="botonPalermo button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPalermo">
-                    Galeria de Palermo
-            </button>
-                <div class="modalPalermo modal fade" id="modalPalermo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel">Galeria de Palermo Apartments</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="fotos modal-body">
-                            <img src="./Galeria/Palermo/Principal.png" alt="palermo1">
-                            <img src="./Galeria/Palermo/img2.png" alt="palermo2">
-                            <img src="./Galeria/Palermo/img3.png" alt="palermo3">
-                            <img src="./Galeria/Palermo/img4.png" alt="palermo4">
-                            <img src="./Galeria/Palermo/img5.png" alt="palermo5">    
-                            <img src="./Galeria/Palermo/img6.png" alt="palermo6">    
-                            <img src="./Galeria/Palermo/img7.png" alt="palermo7">    
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary"><a href="./pages/reservas.html">Reservá en Palermo</a></button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar Galeria</button>
-                        </div>
-                    </div>
-                    </div>
-                </div>
- 
-            <!-- Uriburu -->
-            <article class="uriburuGaleria">
-                <img class="imgGaleria" src="./Galeria/Uriburu/Principal uri.png" alt="uriburu">
-                <h2 class="tituloGaleria">AYRES DE RECOLETA URIBURU</h2>
-            </article>
-            <button type="botonUri button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalUriburu">
-                Galeria de Uriburu
-            </button>
-            <div class="modalUri modal fade" id="modalUriburu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="exampleModalLabel">Galeria de Uriburu Recoleta</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="./Galeria/Uriburu/Principal uri.png" alt="uriburu1">
-                        <img src="./Galeria/Uriburu/uri1.png" alt="uriburu2">
-                        <img src="./Galeria/Uriburu/uri2.png" alt="uriburu3">
-                        <img src="./Galeria/Uriburu/uri3.png" alt="uriburu4">
-                        <img src="./Galeria/Uriburu/uri4.png" alt="uriburu5">
-                        <img src="./Galeria/Uriburu/uri5.png" alt="uriburu6">
-                        <img src="./Galeria/Uriburu/uri6.png" alt="uriburu7">
-                        <img src="./Galeria/Uriburu/uri7.png" alt="uriburu8">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"><a href="./pages/reservas.html">Reservá en Uriburu</a></button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar Galeria</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <!-- Guido -->
-            <article class="guidoGaleria">
-                <img class="imgGaleria" src="./Galeria/Guido/Principal Guido.png" alt="guido">
-                <h2 class="tituloGaleria">RECOLETA PLAZA GUIDO</h2>
-            </article>
-            <button type="botonGuido button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGuido">
-                Galeria de Guido
-            </button>
-            <div class="modalGuido modal fade" id="modalGuido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="exampleModalLabel">Galeria de Recoleta Plaza Guido</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="./Galeria/Guido/Principal Guido.png" alt="guido1">
-                        <img src="./Galeria/Guido/guido1.png" alt="guido2">
-                        <img src="./Galeria/Guido/guido2.png" alt="guido3">
-                        <img src="./Galeria/Guido/guido3.png" alt="guido4">
-                        <img src="./Galeria/Guido/guido4.png" alt="guido5">
-                        <img src="./Galeria/Guido/guido5.png" alt="guido6">
-                        <img src="./Galeria/Guido/guido6.png" alt="guido7">
-                        <img src="./Galeria/Guido/guido7.png" alt="guido8">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary"><a href="./pages/reservas.html">Reservá en Guido</a></button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar  Galeria</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>    
-    </div>
-
-
-<!-- Footer -->
-
-    <footer>
-        <section class="tituloFooter">
-            <h3>AYRES APARTMENTS</h3>
-            <p>Desde 2018</p>
-        </section>
-        <div>
-            <div class="menuFooter">
-                <a href="./index.html"><img class="imgFooter" src="./Galeria/LogoSinFondo.png" alt="logo"></a>
-                <div>
-                    <ul>
-                        <li><a href="./pages/servicios.html">Servicios</a></li>
-                        <li><a href="./pages/ubicaciones.html">Ubicaciones</a></li>
-                        <li><a href="./pages/reservas.html">Reservas</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-            <ul class="redesFooter">
-                <p>Redes Sociales</p>
-                <li>
-                    <div>
-                        <div class="redes"><a target="_blank" href="https://api.whatsapp.com/send?phone=5491127122739"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938058.png" alt="whatsapp"></a></div>
-                        <div class="redes"><a target="_blank" href="https://www.instagram.com/ayresapartments/?utm_medium=copy_link&hl=am-et"><img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="instagram"></a></div>
-                        <div class="redes"><a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="correo"></a></div>
-                    </div>
-                </li>
-                <li>+54 9 11 2712-2739</li>
-                <li>Thames 2313, C1425 FIG, Buenos Aires</li>
-            </ul>
-            <iframe class="iframeFooter"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.839389502848!2d-58.425923184770895!3d-34.58293028046496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5846ef8ac7b%3A0xb56b21808c771fb0!2sThames%202313%2C%20C1425%20FIG%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1661105365253!5m2!1ses-419!2sar"
-                width="250" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
-
 </html>
