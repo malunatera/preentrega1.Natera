@@ -3,11 +3,12 @@
 // // DOM de Inicio
 
 const inicio = document.querySelector('.inicio')
-const bienvenida = document.querySelector('.bienvenida')
+const textoTitulo = document.querySelector('.textoTitulo')
 const ingreso = document.querySelector('.ingreso')
 const nombreInput = document.querySelector('.nombre')
 const apellidoInput = document.querySelector('.apellido')
 const continuar = document.querySelector('.continuar')
+
 
 // // Eventos Inicio
 
@@ -24,7 +25,7 @@ continuar.onclick = () => {
 
     const saludo = document.createElement('h2')
     saludo.innerText = `${usuario.nombre} ${usuario.apellido}`
-    inicio.append(saludo)
+    textoTitulo.append(saludo)
     consulta()
     }
     else{
@@ -49,7 +50,7 @@ function consulta(){
     noReserva.innerText = `No, quiero ver los servicios`
     noReserva.setAttribute('href', './pages/servicios.html')
 
-    inicio.append(divConsulta)
+    textoTitulo.append(divConsulta)
     divConsulta.append(pregunta, siReserva, noReserva)
 }
 

@@ -15,18 +15,21 @@ const cotizar = document.querySelector('.cotizar')
 
 //Descuentos 
 const descuento1 = (p1, precioNoche) => {
+    console.log({p1,precioNoche});
     let resultado = p1 * precioNoche / 1.2
     console.log(resultado)
     return resultado
 }
 
 const descuento2 = (p1, precioNoche) => {
+    console.log({p1,precioNoche});
     let resultado = p1 * precioNoche / 1.3
     console.log(resultado)
     return resultado
 }
 
 const descuento3 = (p1, precioNoche) => {
+    console.log({p1,precioNoche});
     let resultado = p1 * precioNoche / 1.4
     console.log(resultado)
     return resultado
@@ -72,16 +75,20 @@ console.log (tipoHabitacion)
 
 
 const descuento = (x) => {
-    const precio = edificios.precio
+    // la x te la estaba devolviendo como string, por eso fallaba la multiplicacion
+    x = parseInt(x)
+    // tambien aca estabas buscando el precio en el array completo, no en el edificio en si. 
+    // decia edificios.precio, pero precio es de un elemento del array, no del array en si.
+    const edificio = edificios.find(edificio => edificio.nombre === ubicacion.value)
     let resultado
     if (x >= 1 && x <= 2) {
-        resultado = descuento1(x, precio)
+        resultado = descuento1(x, edificio.precio)
     }
     else if (x >= 3 && x <= 4) {
-        resultado = descuento2(x, precio)
+        resultado = descuento2(x, edificio.precio)
     }
     else if (x >= 5) {
-        resultado = descuento3(x, precio)
+        resultado = descuento3(x, edificio.precio)
     }
     console.log(resultado)
     return resultado
@@ -136,11 +143,12 @@ cotizar.onclick = () => {
     reservas.append(presu)
     
     const cotizacion = () => {
-        let resultado
-        resultado = descuentoxNoches * porcentajePax
+        console.log({descuentoxNoches,porcentajePax});
+        let resultado = descuentoxNoches * porcentajePax
+        
         return resultado
     }
-    console.log(cotizacion)
+    console.log(cotizacion())
 
     const presupuesto = () => {
 
@@ -153,7 +161,10 @@ cotizar.onclick = () => {
         noches.innerText = `El presupuesto para ${cantidadNoches} noches, iniciando desde ${checkin} para un depto ${habitacion.value} en el edificio de ${ubicacion.value} seria de:`
     
         const precio = document.createElement('h4')
-        precio.innerText = `${Math.round(cotizacion)}`
+
+        // precio.innerText = `${Math.round(cotizacion)}` en este caso te estaba faltando ejecutar la funcion. los parentesis nomas.
+
+        precio.innerText = `${Math.round(cotizacion())} USD`
     
         reservas.append(divPresupuesto)
         divPresupuesto.append(presupuesto, noches, precio)
